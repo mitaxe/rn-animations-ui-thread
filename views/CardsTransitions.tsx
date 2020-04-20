@@ -64,7 +64,7 @@ const CardsTransitions = () => {
       <SafeAreaView style={styles.bottomNavbar}>
         <Button
           title={!toggled ? `Rotate` : 'Reset'}
-          onPress={() => setToggled(prev => !prev)}
+          onPress={() => setToggled(prev => !prev as any)}
         />
       </SafeAreaView>
     </Fragment>
@@ -73,7 +73,7 @@ const CardsTransitions = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
   },
   boxContainer: {
     ...StyleSheet.absoluteFillObject,
